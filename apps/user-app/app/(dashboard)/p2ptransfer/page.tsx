@@ -1,5 +1,5 @@
 import { SendCard } from "../../../components/SendCard";
-
+import {Button} from '@repo/ui/button'
 
 
 export default function(){
