@@ -1,6 +1,6 @@
 import { SendCard } from "../../../components/SendCard";
 import {Button} from '@repo/ui/button'
-
+import db from '@repo/db/client'
 
 export default function(){
     return(
