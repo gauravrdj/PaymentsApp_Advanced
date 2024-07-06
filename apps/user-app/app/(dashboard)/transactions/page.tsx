@@ -2,7 +2,7 @@ import db from '@repo/db/client'
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../../lib/auth';
 import TransactionCards from '../../../components/TransactionCard';
-
+import { Button } from '@repo/ui/button';
 
 async function getTransaction(id:number){
    const res = await db.p2pTransfer.findMany({
