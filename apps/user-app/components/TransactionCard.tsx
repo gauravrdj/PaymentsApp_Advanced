@@ -10,7 +10,7 @@ interface p2p{
 
 
 export default function TransactionCards({details}:any) {
-  console.log(details.amount)
+ 
     let isReceived = false;
          if(details.id === details.toId){
             isReceived=true;
