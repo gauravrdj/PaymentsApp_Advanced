@@ -1,10 +1,26 @@
+'use client'
 import { SidebarItem } from "../../components/SidebarItem";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 export default function Layout({
   children,
 }: {
   children: React.ReactNode;
 }): JSX.Element {
+  const session= useSession();
+  const router = useRouter();
+const res = session.data?.user || undefined;
+  if(!res){
+    Swal.fire({
+      title : "Unauthenticated Access!",
+      text : "Please Sign in first",
+      icon : "info"
+    });
+    router.push('/signin');
+  }
+
   return (
     <div className="flex">
         <div className="w-72 border-r border-slate-300 min-h-screen mr-4 pt-28">

@@ -30,7 +30,7 @@ export default async function TransactionCard() {
    const session = await getServerSession(authOptions);
    const transactions = await getTransaction(Number(session?.user?.id))
    transactions.reverse()
-   console.log(transactions)
+//    console.log(transactions)
     return (
         <div className='justify-between w-full m-28'>
         {transactions.map(ele=> <TransactionCards details = {ele}></TransactionCards>)}
