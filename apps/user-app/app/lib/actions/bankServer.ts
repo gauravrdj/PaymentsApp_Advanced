@@ -7,7 +7,7 @@ interface bankTypes{
 }
 
 export default async function bankServer(props : bankTypes){
-        const res = await axios.post('http://localhost:3002/hdfcWebhook', {
+        const res = await axios.post('https://webhook-latest.onrender.com/hdfcWebhook', {
             token:props.token,
             amount : props.amount*100,
             userId : props.id
