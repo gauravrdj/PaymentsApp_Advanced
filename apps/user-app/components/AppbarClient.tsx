@@ -12,7 +12,7 @@ export function AppbarClient() {
   return (
    <div>
       <Appbar onSignin={signIn} onSignout={async () => {
-        await signOut({ callbackUrl: "/" });
+        await signOut({ callbackUrl: "https://payments-app-new.onrender.com/" });
         toast.success('See you soon😊')
       }} user={session.data?.user} />
    </div>
